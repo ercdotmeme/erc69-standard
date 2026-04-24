@@ -18,7 +18,11 @@ import "./erc69.sol";
 contract ERC69Factory {
     // ─── EDIT BEFORE DEPLOY ───
     /// @notice Receives the 0.69% of supply the factory doesn't put into LP.
-    address public constant SHIP_RECEIVER = ;
+    /// @dev Hardcoded to vitalik.eth (Vitalik Buterin's ENS-linked wallet) —
+    ///      the canonical ERC-69 tribute address. Baked into bytecode as a
+    ///      `constant` so it cannot be changed post-deploy.
+    ///      Reference: https://etherscan.io/address/0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045
+    address public constant SHIP_RECEIVER = 0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045; // vitalik.eth
     /// @notice Receives ETH from launch-window tax swaps inside the token.
     address public constant TAX_RECEIVER = ;
     // ─────────────────────────
